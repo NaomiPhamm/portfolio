@@ -3,59 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naomi Portfolio</title>
+    <title>Yen Nhi</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <script
+        type="module"
+        src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js">
+    </script>
 </head>
+
 <body>
 
     <header class="navbar">
-        <div class="logo">Naomi Portfolio</div>
+        <div class="logo">Yen Nhi</div>
+
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#tech">Tech Stack</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section class="hero" id="home">
-        <div class="hero-text">
-            <h1>Hello, I'm Naomi</h1>
-            <p>I am a Computer Science student who loves creating clean and beautiful websites.</p>
-            <button id="hireBtn">Hire Me</button>
-        </div>
-    </section>
 
-    <section class="about" id="about">
-        <div class="about-box">
-            <h2>About Me</h2>
-            <p>
-                I enjoy learning web development and building simple, creative, and user-friendly projects using HTML, CSS, JavaScript, Java, C#, and PHP.
-            </p>
-        </div>
-    </section>
+    <!-- HERO SECTION -->
+   <section class="hero" id="home">
 
-    <section class="projects" id="projects">
-        <h2>My Projects</h2>
+<div class="hero-container">
 
-        <div class="project-list">
-            <div class="project-card">
-                <h3>Portfolio Website</h3>
-                <p>A simple personal portfolio made with HTML, CSS, and JavaScript.</p>
-            </div>
+    <div class="hero-text">
 
-            <div class="project-card">
-                <h3>CRUD App</h3>
-                <p>A web application to manage products, users, or tasks with database operations.</p>
-            </div>
+        <h1>Hello, I'm Naomi</h1>
 
-            <div class="project-card">
-                <h3>School Project</h3>
-                <p>A responsive front-end project with clean layout and interactive design.</p>
-            </div>
-        </div>
-    </section>
+        <h2 class="typing">
+            <span id="typing-text"></span>
+        </h2>
 
+        <p class="location fade-up delay1">
+            Based in Montreal, Quebec
+        </p>
+
+        <p class="description fade-up delay2">
+            I enjoy building clean and creative web applications with code.
+        </p>
+
+        <button class="hire-btn fade-up delay2">
+            Hire Me
+        </button>
+
+    </div>
+
+    <div class="hero-3d">
+        <spline-viewer
+            url="https://prod.spline.design/XOmMKfi9NxwkLrx5/scene.splinecode">
+        </spline-viewer>
+    </div>
+
+</div>
+
+</section>
+
+
+    <!-- ABOUT SECTION -->
+   <section class="about" id="about">
+
+<h2 class="about-title">About Me</h2>
+
+<div class="about-container">
+
+<div class="about-card left-card">
+<h3>Who I Am</h3>
+<p>
+I enjoy learning web development and building simple,
+creative, and user-friendly projects using HTML, CSS,
+JavaScript, Java, C#, and PHP.
+</p>
+</div>
+
+<div class="about-card right-card">
+<h3>Tech Stack</h3>
+
+<div class="tech-list">
+
+<span class="tech-item">HTML</span>
+<span class="tech-item">CSS</span>
+<span class="tech-item">JavaScript</span>
+<span class="tech-item">Java</span>
+<span class="tech-item">C#</span>
+<span class="tech-item">PHP</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+  <section class="projects" id="projects">
+
+<h2>My Projects</h2>
+
+<div class="project-list">
+
+<!-- PROJECT 1 -->
+<div class="project-card">
+
+<img src="images/project1.png" class="project-img">
+
+<div class="project-info">
+
+<h3>Portfolio Website</h3>
+
+<p>
+Personal portfolio website built using HTML,
+CSS and JavaScript.
+</p>
+
+<div class="project-buttons">
+
+<a href="https://github.com/yourusername/project1" target="_blank" class="btn github">
+GitHub
+</a>
+
+<a href="https://yourprojectdemo.com" target="_blank" class="btn demo">
+Live Demo
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 2 -->
+<div class="project-card">
+
+<img src="images/project2.png" class="project-img">
+
+<div class="project-info">
+
+<h3>CRUD Web App</h3>
+
+<p>
+Web application with database operations.
+Built using PHP and MySQL.
+</p>
+
+<div class="project-buttons">
+
+<a href="https://github.com/yourusername/project2" target="_blank" class="btn github">
+GitHub
+</a>
+
+<a href="#" class="btn demo">
+Demo
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 3 -->
+<div class="project-card">
+
+<img src="images/project3.png" class="project-img">
+
+<div class="project-info">
+
+<h3>School Project</h3>
+
+<p>
+Responsive front-end project with clean
+layout and interactive design.
+</p>
+
+<div class="project-buttons">
+
+<a href="#" class="btn github">GitHub</a>
+
+<a href="#" class="btn demo">Demo</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+    <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
         <div class="contact-box">
             <h2>Contact Me</h2>
@@ -64,6 +211,8 @@
         </div>
     </section>
 
+
+    <!-- FOOTER -->
     <footer>
         <p>© 2026 Naomi Portfolio. All rights reserved.</p>
     </footer>
