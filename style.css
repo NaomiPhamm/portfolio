@@ -4,23 +4,36 @@
     box-sizing: border-box;
 }
 
+/* ---------- BODY ---------- */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #fff9fb, #fff3f7, #fdf7f9);
-    color: #5f4b57;
+    background: rgb(24, 20, 24);
+    background:
+        radial-gradient(circle at top left, rgba(255, 120, 190, 0.14), transparent 22%),
+        radial-gradient(circle at top right, rgba(255, 170, 210, 0.10), transparent 18%),
+        radial-gradient(circle at bottom center, rgba(255, 90, 170, 0.10), transparent 22%),
+        linear-gradient(90deg,
+            rgba(32, 24, 32, 1) 0%,
+            rgba(21, 18, 24, 1) 14%,
+            rgba(14, 12, 16, 1) 42%,
+            rgba(14, 12, 16, 1) 58%,
+            rgba(21, 18, 24, 1) 86%,
+            rgba(32, 24, 32, 1) 100%);
+    color: #f7eaf0;
     line-height: 1.6;
 }
 
 /* ---------- NAVBAR ---------- */
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #f3d6df;
+    background: rgba(20, 18, 22, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 170, 210, 0.12);
+    box-shadow: 0 6px 20px rgba(255, 110, 180, 0.06);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -29,22 +42,22 @@ body {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #d98fa4;
+    color: #ff9bc7;
 }
 
 nav a {
-    color: #6b4b57;
+    color: #f3dbe6;
     text-decoration: none;
     margin-left: 20px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #d98fa4;
+    color: #ff9bc7;
+    text-shadow: 0 0 12px rgba(255, 130, 190, 0.35);
 }
 
 /* ---------- HERO ---------- */
-
 .hero {
     min-height: 100vh;
     display: flex;
@@ -56,7 +69,6 @@ nav a:hover {
     width: 100%;
     max-width: 1150px;
     margin: 0 auto;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,33 +83,34 @@ nav a:hover {
 .hero-text h1 {
     font-size: clamp(32px, 6vw, 56px);
     margin-bottom: 10px;
-    color: #6b4b57;
+    color: #fff4f8;
     line-height: 1.1;
+    text-shadow: 0 0 22px rgba(255, 120, 190, 0.14);
 }
 
 .typing {
     font-size: clamp(20px, 4vw, 28px);
     font-weight: 500;
-    color: #a0668a;
+    color: #ff9bc7;
     margin-bottom: 18px;
     min-height: 38px;
 }
 
 #typing-text {
-    border-right: 3px solid #a0668a;
+    border-right: 3px solid #ff9bc7;
     padding-right: 5px;
     animation: blink 1s infinite;
 }
 
 .location {
     font-size: 18px;
-    color: #8f7a83;
+    color: #d9bcc8;
     margin-bottom: 10px;
 }
 
 .description {
     font-size: 18px;
-    color: #8f7a83;
+    color: #caaebb;
     max-width: 500px;
     margin-bottom: 25px;
 }
@@ -107,18 +120,21 @@ nav a:hover {
     padding: 12px 24px;
     border: none;
     border-radius: 30px;
-    background: #e8a8b8;
-    color: white;
+    background: rgba(255, 120, 190, 0.12);
+    color: #ff9bc7;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+    border: 1px solid rgba(255, 140, 200, 0.28);
+    box-shadow: 0 0 0 rgba(255, 120, 190, 0);
 }
 
 .hire-btn:hover,
 .hero-text button:hover {
-    background: #d98fa4;
+    background: rgba(255, 120, 190, 0.22);
+    color: white;
     transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(217, 143, 164, 0.18);
+    box-shadow: 0 8px 22px rgba(255, 110, 180, 0.16);
 }
 
 .hero-3d {
@@ -128,14 +144,16 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-
     transform: translateX(-40px);
+    filter: drop-shadow(0 25px 40px rgba(255, 120, 190, 0.12));
+    position: relative;
 }
 
 .hero-3d spline-viewer {
-    width:100%;
+    width: 100%;
     height: 100%;
 }
+
 .hero-3d::after {
     content: "";
     position: absolute;
@@ -143,13 +161,12 @@ nav a:hover {
     bottom: 0;
     width: 180px;
     height: 70px;
-    background: #fdf4f7;
+    background: #171319;
     border-radius: 20px;
     z-index: 10;
 }
 
 /* ---------- HERO TEXT ANIMATION ---------- */
-
 .fade-up {
     opacity: 0;
     transform: translateY(40px);
@@ -182,7 +199,7 @@ nav a:hover {
     }
 
     50% {
-        border-color: #a0668a;
+        border-color: #ff9bc7;
     }
 
     100% {
@@ -217,6 +234,7 @@ nav a:hover {
         height: 360px;
     }
 }
+
 /* ---------- ABOUT SECTION ---------- */
 .about {
     padding: 110px 40px;
@@ -229,9 +247,10 @@ nav a:hover {
     font-size: 72px;
     font-weight: 800;
     margin-bottom: 50px;
-    background: linear-gradient(180deg, #f3b6c8 0%, #d98fa4 100%);
+    background: linear-gradient(180deg, #ffd7e9 0%, #ff9bc7 45%, #ff6db1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 24px rgba(255, 120, 190, 0.10);
     opacity: 0;
     transform: translateY(-40px);
     transition: all 0.8s ease;
@@ -246,7 +265,7 @@ nav a:hover {
     width: 100%;
     max-width: 1280px;
     display: grid;
-      grid-template-columns: 1.4fr 1.2fr;
+    grid-template-columns: 1.4fr 1.2fr;
     gap: 24px;
 }
 
@@ -268,11 +287,18 @@ nav a:hover {
     border-radius: 28px;
     padding: 34px;
     text-align: left;
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.65);
-    box-shadow: 0 10px 30px rgba(217, 143, 164, 0.12);
+    background: linear-gradient(
+        145deg,
+        rgba(25, 21, 28, 0.76),
+        rgba(17, 15, 20, 0.62)
+    );
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 170, 210, 0.10);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        0 24px 50px rgba(255, 90, 170, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
     opacity: 0;
     transition: transform 0.8s ease, opacity 0.8s ease, box-shadow 0.35s ease;
 }
@@ -315,8 +341,11 @@ nav a:hover {
 }
 
 .about-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(217, 143, 164, 0.18);
+    transform: translateY(-8px);
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.42),
+        0 28px 60px rgba(255, 90, 170, 0.14),
+        0 0 28px rgba(255, 110, 180, 0.05);
 }
 
 /* spotlight */
@@ -326,8 +355,8 @@ nav a:hover {
     inset: 0;
     background: radial-gradient(
         circle at var(--x, 50%) var(--y, 50%),
-        rgba(255, 214, 228, 0.45),
-        transparent 38%
+        rgba(255, 110, 180, 0.18),
+        transparent 36%
     );
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -348,21 +377,22 @@ nav a:hover {
 
 .about-card h3 {
     font-size: 28px;
-    color: #6f4f5c;
+    color: #fff3f8;
     margin-bottom: 18px;
     font-weight: 700;
 }
 
 .about-card p {
     font-size: 17px;
-    color: #8f7a83;
+    color: #d0b9c4;
     line-height: 1.8;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
+
 .card-text {
     font-size: 15px;
     line-height: 1.7;
-    color: #8f7a83;
+    color: #d0b9c4;
     margin-top: 8px;
     max-width: 520px;
 }
@@ -374,7 +404,7 @@ nav a:hover {
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    opacity: 0.35;
+    opacity: 0.16;
     pointer-events: none;
 }
 
@@ -384,9 +414,9 @@ nav a:hover {
     inset: 0;
     background: linear-gradient(
         135deg,
-        rgba(255,255,255,0.30) 0%,
-        rgba(255,255,255,0.08) 45%,
-        rgba(255,255,255,0.02) 100%
+        rgba(255,255,255,0.03) 0%,
+        rgba(255,255,255,0.01) 45%,
+        rgba(255,110,180,0.02) 100%
     );
     z-index: 2;
     pointer-events: none;
@@ -394,15 +424,23 @@ nav a:hover {
 
 /* spline box */
 .tech-spline-box {
-    margin-top: 10px;
+    margin-top: 0px;
     width: 100%;
-    height: 360px;
+    height: 470px;
     border-radius: 24px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.18);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: linear-gradient(
+        145deg,
+        rgba(31, 26, 34, 0.84),
+        rgba(19, 16, 22, 0.72)
+    );
+    border: 1px solid rgba(255, 170, 210, 0.14);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.03),
+        0 14px 30px rgba(0, 0, 0, 0.35),
+        0 0 24px rgba(255, 110, 180, 0.05);
 }
 
 .tech-spline {
@@ -456,11 +494,11 @@ nav a:hover {
     }
 
     .tech-spline-box {
-        height: 300px;
+        height: 320px;
     }
 }
-/* ---------- PROJECTS ---------- */
 
+/* ---------- PROJECTS ---------- */
 .projects {
     padding: 80px 40px;
 }
@@ -469,7 +507,8 @@ nav a:hover {
     text-align: center;
     font-size: 40px;
     margin-bottom: 40px;
-    color: #d98fa4;
+    color: #ff9bc7;
+    text-shadow: 0 0 18px rgba(255, 110, 180, 0.08);
 }
 
 .project-list {
@@ -481,17 +520,27 @@ nav a:hover {
 
 .project-card {
     width: 320px;
-    background: rgba(255, 255, 255, 0.92);
+    background: linear-gradient(
+        145deg,
+        rgba(25, 21, 28, 0.82),
+        rgba(17, 15, 20, 0.68)
+    );
     border-radius: 20px;
     overflow: hidden;
-    border: 1px solid #f3d6df;
+    border: 1px solid rgba(255, 170, 210, 0.10);
     transition: 0.3s;
-    box-shadow: 0 6px 20px rgba(232, 168, 184, 0.12);
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.35),
+        0 18px 40px rgba(255, 90, 170, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 }
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 24px rgba(232, 168, 184, 0.18);
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.42),
+        0 22px 50px rgba(255, 90, 170, 0.14);
 }
 
 .project-img {
@@ -499,7 +548,7 @@ nav a:hover {
     height: 190px;
     object-fit: cover;
     display: block;
-    background-color: #fff0f5;
+    background-color: #201820;
 }
 
 .project-info {
@@ -508,12 +557,12 @@ nav a:hover {
 
 .project-info h3 {
     margin-bottom: 12px;
-    color: #6b4b57;
+    color: #fff3f8;
     font-size: 26px;
 }
 
 .project-info p {
-    color: #8f7a83;
+    color: #ccb4bf;
     margin-bottom: 18px;
     font-size: 16px;
     line-height: 1.7;
@@ -536,29 +585,28 @@ nav a:hover {
 }
 
 .github-btn {
-    background-color: #fff0f5;
-    color: #d98fa4;
-    border: 1px solid #e8b7c8;
+    background-color: rgba(255, 120, 190, 0.10);
+    color: #ff9bc7;
+    border: 1px solid rgba(255, 140, 200, 0.22);
 }
 
 .github-btn:hover {
-    background-color: #f8dce6;
+    background-color: rgba(255, 120, 190, 0.18);
     transform: translateY(-2px);
 }
 
 .demo-btn {
-    background-color: #e8a8b8;
+    background-color: rgba(255, 120, 190, 0.18);
     color: white;
-    border: 1px solid #e8a8b8;
+    border: 1px solid rgba(255, 140, 200, 0.24);
 }
 
 .demo-btn:hover {
-    background-color: #d98fa4;
+    background-color: rgba(255, 120, 190, 0.28);
     transform: translateY(-2px);
 }
 
 /* ---------- CONTACT ---------- */
-
 .contact {
     padding: 80px 40px;
 }
@@ -566,37 +614,46 @@ nav a:hover {
 .contact-box {
     max-width: 800px;
     margin: auto;
-    background: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(
+        145deg,
+        rgba(25, 21, 28, 0.82),
+        rgba(17, 15, 20, 0.68)
+    );
     padding: 40px;
     border-radius: 20px;
-    border: 1px solid #f3d6df;
+    border: 1px solid rgba(255, 170, 210, 0.10);
     text-align: center;
-    box-shadow: 0 6px 20px rgba(232, 168, 184, 0.12);
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.35),
+        0 18px 40px rgba(255, 90, 170, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 }
 
 .contact-box h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #d98fa4;
+    color: #ff9bc7;
+    text-shadow: 0 0 18px rgba(255, 110, 180, 0.08);
 }
 
 .contact-box p {
     font-size: 18px;
-    color: #8f7a83;
+    color: #ccb4bf;
 }
 
 /* ---------- FOOTER ---------- */
-
 footer {
     text-align: center;
     padding: 25px;
-    background: #fff0f5;
-    border-top: 1px solid #f3d6df;
-    color: #8f7a83;
+    background: rgba(18, 16, 20, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 170, 210, 0.10);
+    color: #caaebb;
 }
 
 /* ---------- RESPONSIVE ---------- */
-
 @media (max-width: 900px) {
     .hero-text h1 {
         font-size: 46px;
