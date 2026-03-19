@@ -246,7 +246,7 @@ nav a:hover {
     width: 100%;
     max-width: 1280px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1.4fr 1.2fr;
     gap: 24px;
 }
 
@@ -283,6 +283,8 @@ nav a:hover {
 
 .tech-card {
     min-height: 620px;
+    display: flex;
+    flex-direction: column;
 }
 
 .small-one,
@@ -290,7 +292,7 @@ nav a:hover {
     min-height: 190px;
 }
 
-/* animation directions */
+/* animation */
 .from-left {
     transform: translateX(-80px);
 }
@@ -339,8 +341,7 @@ nav a:hover {
 
 .about-card h3,
 .about-card p,
-.tech-list,
-.tech-item {
+.tech-spline-box {
     position: relative;
     z-index: 3;
 }
@@ -358,22 +359,12 @@ nav a:hover {
     line-height: 1.8;
     margin-bottom: 10px;
 }
-
-.tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 10px;
-}
-
-.tech-item {
-    padding: 10px 16px;
-    border-radius: 999px;
-    background: rgba(255, 240, 245, 0.85);
-    border: 1px solid rgba(243, 214, 223, 0.95);
-    color: #d98fa4;
-    font-size: 14px;
-    font-weight: 600;
+.card-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #8f7a83;
+    margin-top: 8px;
+    max-width: 520px;
 }
 
 .bg-gradient {
@@ -399,6 +390,27 @@ nav a:hover {
     );
     z-index: 2;
     pointer-events: none;
+}
+
+/* spline box */
+.tech-spline-box {
+    margin-top: 20px;
+    width: 100%;
+    height: 360px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.tech-spline {
+    width: 100%;
+    height: 125%;
+    display: block;
+    transform: scale(0.88);
+    transform-origin: center center;
 }
 
 @media (max-width: 900px) {
@@ -441,6 +453,10 @@ nav a:hover {
 
     .about-card p {
         font-size: 15px;
+    }
+
+    .tech-spline-box {
+        height: 300px;
     }
 }
 /* ---------- PROJECTS ---------- */
