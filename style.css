@@ -313,6 +313,16 @@ nav a:hover {
     flex-direction: column;
 }
 
+/* Keep the Tech Stack header/text tight to the Spline viewer */
+.tech-card h3 {
+    margin-bottom: 12px;
+}
+
+.tech-card .card-text {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .small-one,
 .small-two {
     min-height: 190px;
@@ -445,9 +455,9 @@ nav a:hover {
 
 .tech-spline {
     width: 100%;
-    height: 125%;
+    height: 100%;
     display: block;
-    transform: scale(0.88);
+    transform: none;
     transform-origin: center center;
 }
 
@@ -491,6 +501,14 @@ nav a:hover {
 
     .about-card p {
         font-size: 15px;
+    }
+
+    .tech-card h3 {
+        margin-bottom: 10px;
+    }
+
+    .tech-card .card-text {
+        margin-bottom: 0;
     }
 
     .tech-spline-box {
