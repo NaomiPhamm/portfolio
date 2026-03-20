@@ -80,7 +80,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+const projectObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+    });
+}, {
+    threshold: 0.2
+});
 
+document.querySelectorAll(".about-title, .about-card, .projects-title").forEach((el) => {
+    aboutObserver.observe(el);
+});
 // TYPING EFFECT
 const words = [
     "Developer",
@@ -130,3 +144,29 @@ function deleteEffect() {
 }
 
 typeEffect();
+// CONTACT CARD SPOTLIGHT
+document.querySelectorAll('.contact-card').forEach(card => {
+    card.addEventListener('mousemove', function (e) {
+        const rect = card.getBoundingClientRect();
+
+        card.style.setProperty('--x', `${e.clientX - rect.left}px`);
+        card.style.setProperty('--y', `${e.clientY - rect.top}px`);
+    });
+});
+
+// CONTACT SCROLL REVEAL
+const contactObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+document.querySelectorAll(".contact-title, .contact-subtitle, .contact-card").forEach((el) => {
+    contactObserver.observe(el);
+});
